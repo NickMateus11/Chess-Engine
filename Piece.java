@@ -13,7 +13,7 @@ public enum Piece {
     WHITE_QUEEN (TYPE.QUEEN, TEAM.WHITE),
     WHITE_KING (TYPE.KING, TEAM.WHITE);
 
-    enum TYPE{
+    public enum TYPE{
         KING,
         QUEEN,
         BISHOP,
@@ -22,7 +22,7 @@ public enum Piece {
         ROOK;
     }
 
-    enum TEAM{
+    public enum TEAM{
         WHITE,
         BLACK;
     }
