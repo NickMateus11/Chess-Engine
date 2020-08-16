@@ -21,9 +21,10 @@ public class Board {
         curr_player = Piece.TEAM.WHITE;
     }
 
-    public boolean move(int[] p1, int[] p2) {
-        board[p2[0]][p2[1]] = board[p1[0]][p1[1]]; 
-        board[p1[0]][p1[1]] = null;
+    public boolean move(int[] curr_pos, int[] moveTo_pos) {
+        // int[] -> [(int)file, rank] ie: a2 -> [0,2]
+        board[moveTo_pos[0]][moveTo_pos[1]] = board[curr_pos[0]][curr_pos[1]]; 
+        board[curr_pos[0]][curr_pos[1]] = null;
         return true;
     }
 
@@ -31,6 +32,7 @@ public class Board {
         return Arrays.deepToString(board)
         .replace("],", "],\n")
         .replace(",", ",\t")
-        .replace("null,", "null,\t");
+        .replace("null]", "null ]")
+        .replaceAll("null.{1}", "    .    ");
     }
 }
