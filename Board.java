@@ -19,7 +19,7 @@ public class Board {
     }
 
     public boolean move(int[] curr_pos, int[] moveTo_pos) {
-        // int[] -> [(int)file, rank] ie: a2 -> [0,2]
+        // int[] -> [rank, (int)file] ie: a2 -> [2, 0]
         board[moveTo_pos[0]][moveTo_pos[1]] = board[curr_pos[0]][curr_pos[1]]; 
         board[curr_pos[0]][curr_pos[1]] = null;
         return true;
