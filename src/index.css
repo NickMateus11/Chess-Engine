@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,30 +8,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  margin:0
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 /* Chess Board  */
+
 body{
   display: block;
   margin: auto;
-  width: 500px;
+  /* width: 500px; */
   margin-top:10px;
+  /* margin-bottom:50px; */
+  margin-left:100px;
+  margin-right:100px;
 }
 
 .square{
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
   margin: 0px;
   animation: fadeIn 1s;
 }
 
 #boardOuter{
-  height: 225px;
-  width: 225px;
+  height: 450px;
+  width: 450px;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -38,29 +47,29 @@ body{
 
 #boardInner{
   border: solid 1px black;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   display: inline-flex;
   flex-wrap: wrap;
   margin: auto;
 }
 
 #numberContainer{ 
- width: 200px;
- height: 25px;
+ width: 400px;
+ height: 50px;
   margin-left:24px;
 }
 
 #letterContainer{
-  width: 23px;
+  width: 47px;
   display: inline-block;
-  height: 200px;
+  height: 400px;
   margin-top:1px;
 }
 
 .label {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -68,8 +77,8 @@ body{
 
 .row{
   display: flex;
-  width: 200px;
-  height: 25px;
+  width: 400px;
+  height: 50px;
 }
 
 /* End-Of Chess Board */

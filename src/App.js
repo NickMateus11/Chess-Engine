@@ -38,7 +38,7 @@ function App() {
         square.className = 'square'
         square.style.backgroundColor = j % 2 === 0 ? 'white' : 'black'
         if (i%boardDim < 2 || i%boardDim >= boardDim-2) {
-          square.innerHTML = `<img src="https://avatars2.githubusercontent.com/u/37048727?s=64&v=4" width="15px" height="15px" style="padding-left:5px;padding-top:5px"/>`
+          square.innerHTML = `<img src="https://avatars2.githubusercontent.com/u/37048727?s=64&v=4" width="30px" height="30px" style="padding-left:10px;padding-top:10px"/>`
         }
         row.appendChild(square)
       }
