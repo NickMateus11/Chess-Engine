@@ -1,2 +1,2 @@
 # Chess-Engine
-Chess Engine Implemented in Java
+Chess Engine Implemented in Javascript
