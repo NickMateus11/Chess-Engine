@@ -1,4 +1,5 @@
 import React from 'react';
+import * as PIECES from './imgs';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
   var numbers = ['1', '2', '3', '4', '5', '6', '7', '8']
   var boardDim = letters.length
   var display = 'block'
+  var colorPack = ['blanchedAlmond', 'brown']
   
   const renderLabels = () => {
     letters.forEach((x,i)=>{
@@ -36,9 +38,13 @@ function App() {
       for (var j = 0; j < boardDim; ++j){
         var square = document.createElement('DIV')
         square.className = 'square'
-        square.style.backgroundColor = j % 2 === 0 ? 'white' : 'black'
+        square.style.backgroundColor = colorPack[j % 2]
         if (i%boardDim < 2 || i%boardDim >= boardDim-2) {
-          square.innerHTML = `<img src="https://avatars2.githubusercontent.com/u/37048727?s=64&v=4" width="30px" height="30px" style="padding-left:10px;padding-top:10px"/>`
+          // ***** TODO change this - just randomly picking pieces ****
+          const pieces = Object.keys(PIECES)
+          const randPiece = PIECES[pieces[Math.floor(Math.random()*pieces.length)]]
+
+          square.innerHTML = `<img class="piece_img" src=${randPiece} />`
         }
         row.appendChild(square)
       }
