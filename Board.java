@@ -3,7 +3,6 @@ import java.util.Arrays;
 
 public class Board {
     int BOARD_SIZE = 8;
-    Piece.TEAM curr_player;
     Piece[][] board;
 
     public Board(){
@@ -17,8 +16,6 @@ public class Board {
             {Piece.WHITE_PAWN, Piece.WHITE_PAWN,   Piece.WHITE_PAWN,   Piece.WHITE_PAWN,  Piece.WHITE_PAWN, Piece.WHITE_PAWN,   Piece.WHITE_PAWN,   Piece.WHITE_PAWN},
             {Piece.WHITE_ROOK, Piece.WHITE_KNIGHT, Piece.WHITE_BISHOP, Piece.WHITE_QUEEN, Piece.WHITE_KING, Piece.WHITE_BISHOP, Piece.WHITE_KNIGHT, Piece.WHITE_ROOK}
         };
-
-        curr_player = Piece.TEAM.WHITE;
     }
 
     public boolean move(int[] curr_pos, int[] moveTo_pos) {
